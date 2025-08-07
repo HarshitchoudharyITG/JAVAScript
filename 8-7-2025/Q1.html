@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+//  Question 1: Movie Rating Checker
+//  Ek movie object banao jisme title aur rating (0 se 10 tak) ho.
+//  If-else ka use karke check karo:
+// Agar rating ≥ 9 → "Excellent" print karo
+
+
+// 7 se 8.9 ke beech → "Good"
+
+
+// 5 se 6.9 ke beech → "Average"
+
+
+// 5 se kam → "Poor"
+      let movie = {
+  title: "pushpa",
+  rating: 2,
+};
+
+
+if (movie.rating >= 9) {
+  console.log("Excellent");
+} else if (movie.rating >= 7 && movie.rating < 9) {
+  console.log("Good");
+} else if (movie.rating >= 5 && movie.rating < 7) {
+  console.log("Average");
+} else {
+  console.log("Poor");
+}
+    </script>
+</body>
+</html>

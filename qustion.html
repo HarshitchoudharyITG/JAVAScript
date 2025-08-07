@@ -1,0 +1,240 @@
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Image Source Changer</title>
+</head>
+<body>
+
+<img id="myImage" src="download.jpg" width="100" height="100">
+
+<button onclick="changeImage()">Change Image</button>
+
+<script>
+function changeImage() {
+  var img = document.getElementById("myImage");
+  img.setAttribute("src", "images.jpg");
+}
+</script>
+
+</body>
+</html> 
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Change Div Content</title>
+</head>
+<body>
+
+<div id="myDiv">
+  <p>This is the original content of the div.</p>
+</div>
+
+<script>
+
+  const myDivElement = document.getElementById('myDiv');
+
+
+  myDivElement.innerHTML = '<h1>New Heading</h1><p>This is the new content.</p>';
+</script>
+
+</body>
+</html> 
+
+ <!DOCTYPE html>
+<html>
+<head>
+<title>data-* Attribute Fetch</title>
+</head>
+<body>
+
+<div id="myElement" data-custom-value="example data">This is a custom element.</div>
+
+<script>
+  const element = document.getElementById('myElement');
+  const dataValue = element.getAttribute('data-custom-value');
+  console.log(dataValue); 
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>hasAttribute Example</title>
+</head>
+<body>
+
+<a href="https://www.example.com" id="myLink">Example Link</a>
+<div id="result"></div>
+
+<script>
+  const element = document.getElementById("myLink");
+  const hasHref = element.hasAttribute("href");
+
+  const resultDiv = document.getElementById("result");
+  resultDiv.textContent = "The element has 'href' attribute: " + hasHref;
+  console.log("The element has 'href' attribute:", hasHref);
+</script>
+
+</body>
+</html>
+
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Background Color Change</title>
+</head>
+<body>
+
+<button id="myButton">Change Background</button>
+<div id="myDiv" style="width: 200px; height: 200px; background-color: lightblue;"></div>
+
+<script>
+  const button = document.getElementById("myButton");
+  const div = document.getElementById("myDiv");
+
+  button.addEventListener("click", function() {
+    div.style.backgroundColor = "lightgreen";
+  });
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id='parent'>
+    <p>ABC</p>
+    <img src='http://www.w3schools.com/tags/smiley.gif' alt="Smiley"/>
+    <div id='child'>
+        <div id='child1'>test1</div>
+        <div id='child2'>test2</div>
+    </div>
+</div>
+
+<script>
+
+
+    let element  = document.getElementById("parent");
+    let text = element.getAttribute("id")
+    console.log(text)
+
+     let element1 = document.getElementById("parent");
+    let text1 = element.hasAttribute("id")
+    console.log(text1)
+
+    
+    
+    
+    let element4 = document.getElementById("parent");
+    let text4 = element4.attributes;
+    console.log(text4)
+    
+    let element2= document.getElementById("parent");
+   let text2 = element.setAttribute("id","h1")
+   console.log(text2)
+
+
+   let element3 = document.getElementById("parent");
+   let text3 = element.removeAttribute("id")
+    console.log(text3)
+</script>
+</body>
+</html> 
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='parent'>
+    <p>ABC</p>
+    <img src='http://www.w3schools.com/tags/smiley.gif' alt="Smiley"/>
+    <div id='child'>
+        <div id='child1'>test1</div>
+        <div id='child2'>test2</div>
+    </div>
+</div>
+
+<script>
+     let element3 = document.getElementById("parent");
+   let text3 = element.removeAttribute("id")
+    console.log(text3)
+</script>
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id='parent'>
+    <p>ABC</p>
+    <img src='http://www.w3schools.com/tags/smiley.gif' alt="Smiley"/>
+    <div id='child'>
+        <div id='child1'>test1</div>
+        <div id='child2'>test2</div>
+    </div>
+</div>
+
+<script>
+
+     let element1 = document.getElementById("parent");
+    let text1 = element.hasAttribute("id")
+    console.log(text1)
+
+</script>
+</body>
+</html>  -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>getElementById Example</title>
+</head>
+<body>
+
+  <p id="demo">HARSHIT</p>
+  <button onclick="changeText()">HII</button>
+
+  <script>
+    function changeText() {
+      var element = document.getElementById("demo");
+
+      var currentText = element.innerHTML;
+      console.log("Pehla text: " + currentText);
+
+      element.innerHTML = "hii harshit choudhary";
+    }
+  </script>
+
+</body> --> 

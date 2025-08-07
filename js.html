@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+    <div class="box" >
+      <nev class="never">
+        <ul class="ule">
+            <li>home</li>
+            <li>about</li>
+            <li>ghuyfg</li>
+            <li>reugih</li> 
+        </ul>
+      </nev>
+    </div>
+    <!----------------------------------------------second------------------------------------------------------->
+    
+     <div class="second" >
+      <nev class="neever">
+        <ul class="ulee">
+            <li>home</li>
+            <li>about</li>
+            <li>ghuyfg</li>
+            <li>reugih</li> 
+        </ul>
+      </nev>
+    </div>
+    </div>
+    
+    <div class="main">
+<div class="box" >
+      <nev class="never">
+        <ul class="ule">
+            <li>home</li>
+            <li>about</li>
+            <li>ghuyfg</li>
+            <li>reugih</li> 
+        </ul>
+      </nev>
+    </div>
+    <!----------------------------------------------second------------------------------------------------------->
+    
+     <div class="second" >
+      <nev class="neever">
+        <ul class="ulee">
+            <li>home</li>
+            <li>about</li>
+            <li>ghuyfg</li>
+            <li>reugih</li> 
+        </ul>
+      </nev>
+    </div>
+
+    </div>
+    
+    <script>
+ const divEle = document.querySelector(".box");
+ console.log(divEle.innerHTML);
+  console.log(divEle.outerHTML);
+ divEle.innerHTML= `NAME : <input type="text" placeholder="name">`
+
+//   console.log(divEle.innerHTML);
+ const diveEle = document.querySelector(".second");
+  console.log(diveEle.outerHTML);
+//  divEle.innerHTML= `<input type="text" placeholder="name">`
+ 
+        diveEle.outerHTML= `LAST NAME : <input type="text" placeholder=" name">`
+        let res = diveEle===1;
+    </script>
+</body>
+</html>

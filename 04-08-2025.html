@@ -1,0 +1,361 @@
+<!-- Ek page banao jisme 5 buttons ho (Button 1 to 5). Jab user kisi bhi button par click kare, 
+    us button ka text "Clicked!" ho jaye aur background color green ho jaye — sirf usi button ka.-->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+                  border-radius: 90px;
+        }
+        button.clicked {
+            background-color: green;
+            color: white;
+            border-radius: 90px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="buttonContainer">
+    <button id="btn1">Button1</button>
+    <button id="btn2">Button2</button>
+    <button id="btn3">Button3</button>
+    <button id="btn4">Button4</button>
+    <button id="btn5">Button5</button>
+</div>
+
+<script>
+    document.getElementById('buttonContainer').addEventListener('click', function(event) {
+        if (event.target.tagName === 'BUTTON') {
+            event.target.textContent = 'Clicked!';
+            event.target.classList.add('clicked');
+        }
+    });
+</script>
+</body>
+</html> -->
+
+
+<!-- 
+ Ek password input field aur ek eye icon (image ya emoji) banao. 
+Eye par click karne par password field type="text" aur wapas type="password" ho jaye (toggle effect).
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="password"  id="myInput"><br><br>
+<button onclick="myFunction()">Show Password</button>
+    <script>
+    function myFunction() {
+      let x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+</body>
+</html>   -->
+
+<!-- 
+ Ek image gallery banao jisme 3 thumbnails already ho. 
+Jab user kisi thumbnail par click kare, toh upar ek bada image dikhaye
+ (thumbnail ke image URL se).  -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery Example</title>
+  <style>
+    .gallery { display: flex; gap: 10px; margin-top: 10px; }
+    .gallery img { width: 150px; cursor: pointer; border: 2px solid #ccc; }
+    #preview { width: 600px; height: auto; display: block; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <img id="preview" src="" alt="Click a thumbnail below to preview" />
+
+    <div class="gallery">
+    <img class="thumb" src="https://cdn.prod.website-files.com/616e938268c8f0a92cb2b540/626b2105eca8a62c25bbd9f0_youtube%20thumbnail%20size%20and%20best%20practices%20by%20veed%20studio.jpg" alt="Thumb 1">
+    <img class="thumb" src="https://framerusercontent.com/images/FNdI0O5SNlfomAUqYygTRetPc.png" alt="Thumb 2">
+    <img class="thumb" src="https://blog.photoadking.com/wp-content/uploads/2021/06/1673927931336.jpg" alt="Thumb 3">
+  </div>
+
+  <script>
+    const preview = document.getElementById('preview');
+    const thumbs = document.querySelectorAll('.thumb');
+    thumbs.forEach(img => {
+      img.addEventListener('click', () => {
+        preview.src = img.src;
+      });
+    });
+    if (thumbs[0]) thumbs[0].click();
+  </script>
+</body>
+</html> -->
+
+
+
+
+<!-- Ek text input aur ek button banao. Jab user kuch likhe aur button click kare, 
+toh neeche ek <p> tag mein woh text show ho. Har baar purana text overwrite ho. -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="textInput" placeholder="text">
+    <button onclick="updateText()">OK</button>
+
+    <p id="output"></p>
+
+    <script>
+
+
+        function updateText() {
+            const inputText = document.getElementById("textInput").value;
+            document.getElementById("output").innerText = inputText;
+        }
+    </script>
+</body>
+
+</html>  -->
+
+
+
+
+
+
+<!-- 
+Ek box banao jiska color default gray ho. 
+JavaScript likho jisse jab mouse box ke upar aaye toh background color blue ho jaye,
+ aur mouse bahar jaaye toh wapas gray. -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+  <meta charset="UTF‑8">
+  <title>Hover‑Box Demo</title>
+  <style>
+  
+    #myBox {
+      width: 500px;
+      height: 500px;
+      background-color: gray;
+  
+    }
+  </style>
+</head>
+<body>
+
+  <div id="myBox"></div>
+
+  <script>
+   
+    const box = document.getElementById("myBox");
+
+
+    box.addEventListener("mouseenter", () => {
+      box.style.backgroundColor = "blue";
+    });
+
+
+    box.addEventListener("mouseleave", () => {
+      box.style.backgroundColor = "gray";
+    });
+  </script>
+
+</body>
+</html> -->
+
+
+
+
+<!--Ek page par 3 checkboxes ho: Red, Green, Blue. Jab user checkbox check kare,
+ toh ek div ka background color change ho (jo checkbox checked ho). 
+ Multiple checkbox ka effect combine karo. -->
+
+
+
+<!-- Ek button banao jisse click karne par kisi p tag ka 
+font-size 16px se 24px ho jaye aur font-weight bold ho jaye. -->
+
+
+
+
+
+<!-- Ek form banao jisme naam aur email fields ho.
+ Jab user submit kare, toh JavaScript se values console mein print ho jayein
+  aur form reload na ho. -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Name & Email Form</title>
+</head>
+<body>
+  <form id="Form">
+    <label>
+      Name:
+      <input type="text" name="name" required />
+    </label>
+    <br /><br />
+    <label>
+      Email:
+      <input type="email" name="email" required />
+    </label>
+    <br /><br />
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('Form');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      const formData = new FormData(form);
+      const name = formData.get('name');
+      const email = formData.get('email');
+
+      console.log('Name:', name);
+      console.log('Email:', email);
+    });
+  </script>
+</body>
+</html>
+
+
+
+ -->
+
+
+
+
+<!-- 
+Ek table banao jisme 3 rows ho. Har row ke aage ek "Delete" button ho.
+ Jab user delete click kare, toh us row ka visibility display: none ho jaye. -->
+
+
+
+   <!DOCTYPE html>
+<html>
+<head>
+<title>Table Row Delete</title>
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<table>
+  <tr id="row1">
+    <td>1 Row</td>
+    <td><button onclick="deleteRow('row1')">Delete</button></td>
+  </tr>
+  <tr id="row2">
+    <td>2 Row</td>
+    <td><button onclick="deleteRow('row2')">Delete</button></td>
+  </tr>
+  <tr id="row3">
+    <td>3 Row</td>
+    <td><button onclick="deleteRow('row3')">Delete</button></td>
+  </tr>
+</table>
+
+<script>
+function deleteRow(row1) {
+  document.getElementById(row1).classList.add("hidden");
+}
+</script>
+
+</body>
+</html>  
+
+
+
+
+<!-- Ek <a> tag banao jiska default href="#" ho. JavaScript se jab user uspe click kare,
+   toh page scroll na ho aur us link ka text "Link Clicked!" ban jaye. -->
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+                  border-radius: 90px;
+        }
+        button.clicked {
+            background-color: green;
+            color: white;
+            border-radius: 90px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="buttonContainer">
+    <a href="#" id="btn1">Button1</a>
+
+</div>
+
+<script>
+    document.getElementById('buttonContainer').addEventListener('click', function(event) {
+        if (event.target.tagName === 'A') {
+            event.target.textContent = 'Link Clicked!';
+            event.target.classList.add('clicked');
+        }
+    });
+</script>
+</body>
+</html>  -->
+
+
+
+
+
+
+
+ 
+
+ 

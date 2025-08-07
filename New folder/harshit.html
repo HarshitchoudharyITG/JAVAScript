@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// function swapNumbers(arrs,arr1,arr2) {
+//     let c= arr[arr1]; arr[arr1] = arr[arr2]; arr[arr2] = c;
+// }
+// let arr=[19,16,2,34,45];
+// // let n1 = "5";
+// // let n2 = "10";
+// // [n1, n2] = swapNumbers(n1, n2); 
+// // console.log(`Swapped: n1 = ${n1}, n2 = ${n2}`); 
+ 
+// let res = swapNumbers(arr,0,1);
+// console.log(`${arr}`)
+
+// let a=19;
+// let b=38;
+
+
+
+// function bignumber(a,b){
+//   if(a>b){
+// console.log("ais big")
+//   }else if(a<b){
+//     console.log("b is big")
+//   }
+
+
+
+let arr=[1,23,3,4,5677,88,7409350];
+
+
+
+function bignumber(a,b){
+    if(a>b){
+        return a;
+    }else{
+        return b;
+    }
+}
+// let big = bignumber(19,13);
+// console.log("is a big number", big)
+
+let max=0;
+for(let i=0;i<arr.length;i++){
+    max = bignumber(max,arr[i]);
+
+    console.log(max)
+}
+
+    </script>
+</body>
+</html>
+

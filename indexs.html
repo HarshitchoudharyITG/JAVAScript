@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="target">Your content here…</div>
+  <script>
+    function askTime() {
+      const input = prompt("Enter timeout in milliseconds:");
+      if (input === null) {
+        alert("Cancelled. Using default 5000 ms.");
+        return 5000;
+      }
+      const num = Number(input);
+      if (!Number.isFinite(num) || !/^\s*\d+\s*$/.test(input)) {
+        alert("Please enter only number.");
+        return askTime();
+      }
+      return parseInt(input, 10);
+    }
+
+    const time = askTime();
+
+    setTimeout(() => {
+      const el = document.getElementById('target');
+      if (el) el.remove();
+    }, time);
+  </script>
+</body>
+</html>

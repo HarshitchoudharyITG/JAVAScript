@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login{
+            background-color: aquamarine;
+            display: block;
+        }
+
+       .singup_input{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 20px;
+
+       }
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <button>login</button>
+        <button>singup</button>
+
+        <div class="input ">
+            <input type="text" placeholder="name">
+            <input type="text" placeholder="class">
+        </div>
+     
+        <div class="singup_input">
+             <input type="text" placeholder="name">
+            <input type="text" placeholder="class">
+             <input type="text" placeholder="name">
+            <input type="text" placeholder="class">
+             <input type="text" placeholder="name">
+            <input type="text" placeholder="class">
+             <input type="text" placeholder="name">
+            <input type="text" placeholder="class">
+        </div>
+    </div>
+
+
+<script>
+            document.addEventListener('DOMContentLoaded', function() {
+        const color = document.getElementById('colorToggleButton');
+        const targetElement = document.getElementById('targetElement');
+
+        color.addEventListener(lo, function() {
+            targetElement.classList.toggle('active-color');
+            targetElement.classList.toggle('content');
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .all-div-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+  }
+  .div-item {
+    border: 1px solid black;
+    padding: 20px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="all-div-container">
+  <div class="div-item" id="div1" onclick="swapDiv(this);">1</div>
+  <div class="div-item" id="div2" onclick="swapDiv(this);">2</div>
+  <div class="div-item" id="div3" onclick="swapDiv(this);">3</div>
+</div>
+
+<script>
+function swapDiv(clickedElem) {
+  const container = clickedElem.parentElement;
+  const allDivs = Array.from(container.children); 
+  const centerIndex = 1; 
+  if (clickedElem === allDivs[centerIndex]) {
+    return;
+  }
+
+  
+  container.removeChild(clickedElem);
+
+  if (centerIndex < allDivs.length - 1) {
+    container.insertBefore(clickedElem, allDivs[centerIndex]);
+  } else {
+    container.appendChild(clickedElem); 
+  }
+}
+</script>
+
+</body>
+</html>

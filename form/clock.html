@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <style>
+      
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        #currentTime {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .alarm-controls select, .alarm-controls button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .alarm-controls button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .alarm-controls button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Alarm Clock</h1>
+        <div id="currentTime"></div>
+
+        <div class="alarm-controls">
+            <select id="alarmHour"></select>
+            <select id="alarmMinute"></select>
+            <select id="alarmAmPm">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select>
+            <button id="setAlarm">Set Alarm</button>
+            <button id="clearAlarm">Clear Alarm</button>
+        </div>
+<audio id="alarmSound" >
+  <source src="ram-bhali-kry-ga-urdu-poem-22538.mp3" type="audio/ogg">
+  <source src="ram-bhali-kry-ga-urdu-poem-22538.mp3" type="audio/mpeg">
+</audio>
+        <audio id="alarmSound" src="goodm.mp3" loop></audio> 
+     
+    </div>
+
+    <script>
+     
+        const currentTimeDisplay = document.getElementById('currentTime');
+        const alarmHourSelect = document.getElementById('alarmHour');
+        const alarmMinuteSelect = document.getElementById('alarmMinute');
+        const alarmAmPmSelect = document.getElementById('alarmAmPm');
+        const setAlarmButton = document.getElementById('setAlarm');
+        const clearAlarmButton = document.getElementById('clearAlarm');
+        const alarmSound = document.getElementById('alarmSound');
+
+        let alarmTime = null;
+        let alarmTimeout = null;
+
+        
+        for (let i = 1; i <= 12; i++) {
+            const option = document.createElement('option');
+            option.value = String(i).padStart(2, '0');
+            option.textContent = String(i).padStart(2, '0');
+            alarmHourSelect.appendChild(option);
+        }
+        for (let i = 0; i < 60; i++) {
+            const option = document.createElement('option');
+            option.value = String(i).padStart(2, '0');
+            option.textContent = String(i).padStart(2, '0');
+            alarmMinuteSelect.appendChild(option);
+        }
+
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            currentTimeDisplay.textContent = timeString;
+
+            if (alarmTime && alarmTime.getTime() <= now.getTime()) {
+                alarmSound.play(),4800000;
+                clearTimeout(alarmTimeout);
+                alarmTime = null;
+            }
+        }
+
+        function setAlarm() {
+            const hour = parseInt(alarmHourSelect.value);
+            const minute = parseInt(alarmMinuteSelect.value);
+            const ampm = alarmAmPmSelect.value;
+
+            let alarmHour = hour;
+            if (ampm === 'PM' && hour !== 12) {
+                alarmHour += 12;
+            } else if (ampm === 'AM' && hour === 12) {
+                alarmHour = 0;
+            }
+
+            const now = new Date();
+            const newAlarmTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), alarmHour, minute, 0);
+
+            if (newAlarmTime.getTime() <= now.getTime()) {
+               
+                newAlarmTime.setDate(newAlarmTime.getDate() + 1);
+            }
+
+            alarmTime = newAlarmTime;
+            alert(`Alarm set for ${newAlarmTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}`);
+        }
+
+        function clearAlarm() {
+            if (alarmTimeout) {
+                clearTimeout(alarmTimeout);
+            }
+            alarmSound.pause();
+            alarmSound.currentTime = 0;
+            alarmTime = null;
+            alert('Alarm cleared!');
+        }
+
+        setAlarmButton.addEventListener('click', setAlarm);
+        clearAlarmButton.addEventListener('click', clearAlarm);
+
+        setInterval(updateTime, 1000); 
+        updateTime(); 
+    </script>
+</body>
+</html>

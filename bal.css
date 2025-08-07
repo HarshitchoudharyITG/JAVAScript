@@ -1,0 +1,10 @@
+    #clock {
+    
+    font-family: 'Arial', sans-serif;
+    font-size: 10em;
+    color: #333;
+    background-image: url("bal.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}

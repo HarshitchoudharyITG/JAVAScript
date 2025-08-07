@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // 1. Double the numbers in an array
+ // Ek array mein diye gaye numbers ka har element double karo aur naya array return karo.
+ // Input: [1, 2, 3] => Output: [2, 4, 6]
+ 
+ 
+//  let arr=[1,2,3];
+ 
+//  let res=arr.map((value,index,array) => {
+//      return value*2
+//  });
+ 
+//  console.log(res)
+
+
+
+// 2. Convert array of strings to uppercase
+ // Ek string array lo jisme lowercase words ho aur har word ko uppercase mein convert karo.
+ // Input: ['a', 'b', 'c'] => Output: ['A', 'B', 'C']
+ 
+//  let arr=["a","b","c"];
+ 
+//  let res=arr.map((value,index)=>{
+//      return value.toUpperCase()
+//  })
+//  console.log(res)
+
+
+
+ // 3. Extract names from an array of objects
+ // Ek array jisme objects ho aur har object mein 'name' ho, usme se sirf names ka array banao.
+ // Input: [{ name: 'Alice' }, { name: 'Bob' }] => Output: ['Alice', 'Bob']
+ 
+//  let arr=[{name:"Alice"},{name:"Bob"}];
+//  let res=arr.map((value)=>{
+//      return value.name;
+//  })
+//  console.log(res)
+
+
+
+
+// 4. Append "!" to each word
+ // Har string ke end mein ek exclamation mark (!) jod do aur naya array return karo.
+ // Input: ['hi', 'hello'] => Output: ['hi!', 'hello!']
+ 
+ 
+ 
+ 
+//  let arr=["hi","hello"]
+//  let res=arr.map((value)=>{
+//      return value+"!"
+//  });
+//  console.log(res)
+ 
+
+
+
+
+// 5. Convert numbers to strings
+ // Numbers ke array ko strings ke array mein badlo.
+ // Input: [1, 2, 3] => Output: ['1', '2', '3']
+ 
+ 
+
+ 
+//  let numbers = [1, 2, 3];
+// let res = numbers.map(String); 
+// console.log(res); 
+ 
+
+
+ // 6. Print each element of an array
+ // forEach use karke array ke har element ko console par print karo.
+ // Input: [1, 2, 3] => Output: console.log 1, 2, 3
+ 
+ 
+ 
+        // let numbers=[1,2,3];
+        // let res = numbers.forEach((value)=>{
+        //     console.log(value)
+        // })
+ 
+
+ // 7. Sum all values in an array using forEach
+ // forEach ka use karke array ke sabhi values ka sum nikalna hai.
+ // Input: [1, 2, 3] => Output: 6
+// let numbers = [1, 2, 3];
+// let total = sum(numbers);
+// console.log(total); 
+ 
+// function sum(arr) {
+//   let sum = 0;
+//   arr.forEach(function(number) {
+//     sum += number;
+//   });
+//   return sum;
+// }
+
+
+
+ // 9. Push squared values to a new array
+ // Array ke har number ka square nikalke naye array mein daalo using forEach.
+ // Input: [2, 3, 4] => Output: [4, 9, 16]
+ 
+ //let arr = [2, 3, 4];
+//let squre = [];
+
+//arr.forEach((number) => {
+ // squre.push(number * number);
+//});
+
+//console.log(squre); 
+ 
+
+
+ // 10. Log index and value for each array element
+ // forEach ka use karke index aur value dono ko print karo in format: "Index X: value"
+ // Input: ['a', 'b'] => Output: "Index 0: a", "Index 1: b"
+ 
+//  const array = ['a', 'b'];
+
+// array.forEach((value, index) => {
+//   console.log(`Index ${index}: ${value}`);
+// });
+ 
+// 12. Get users older than 18
+ // User objects mein se unko rakhna hai jinki age 18 se zyada ho.
+ // Input: [{ age: 17 }, { age: 19 }] => Output: [{ age: 19 }]
+
+
+// function getUsersOlderThan18(users) {
+//   return users.filter(user => user.age > 18);
+// }
+
+
+// const input = [{ age: 17 }, { age: 19 }];
+// const output = getUsersOlderThan18(input);
+// console.log(output); 
+
+
+// 14. Get strings longer than 3 characters
+ // Sirf un strings ko return karo jinki length 3 se zyada ho.
+ // Input: ['hi', 'hello'] => Output: ['hello']
+
+
+
+// function Strings(strings) {
+//   return strings.filter(str => str.length > 3);
+// }
+// let a = ['hi', 'hello'];
+// let b = Strings(a);
+// console.log(b);
+
+
+// 15. Filter by property existence
+ // Sirf un objects ko return karo jinke paas specific property ho, jaise 'active'.
+ // Input: [{ name: 'X' }, { name: 'Y', active: true }] => Output: [{ name: 'Y', active: true }]
+
+
+// function filte(arr, property) {
+//   return arr.filter(obj => obj.hasOwnProperty(property));
+// }
+// let a = [{ name: 'X' }, { name: 'Y', active: true }];
+// let b= filte(a, 'active');
+// console.log(b);
+
+// 16. Get doubled even numbers
+ // Pehle even numbers filter karo, fir unko double karo using map.
+ // Input: [1, 2, 3, 4] => Output: [4, 8]
+
+
+// function numbersa(numbers) {
+//   return numbers
+//     .filter(num => num % 2 === 0)  
+//     .map(num => num * 2);         
+// }
+
+
+// let a = [1, 2, 3, 4];
+// let b = numbersa(a);
+// console.log(b);
+
+
+// 17. Get names of users over 20
+ // Users jinki age 20 se zyada ho unka naam return karo.
+ // Input: [{ name: 'A', age: 20 }, { name: 'B', age: 25 }] => Output: ['B']
+
+
+
+
+// function Over20(users) {
+//   return users
+//     .filter(user => user.age > 20)  
+//     .map(user => user.name);       
+// }
+
+// let a = [{ name: 'A', age: 20 }, { name: 'B', age: 25 }];
+// let b = Over20(a);
+// console.log(b);
+
+
+
+
+// 18. Count how many values > 10
+ // 10 se bade values kitne hain ye count karo.
+ // Input: [5, 12, 18, 7] => Output: 2
+
+
+// function countOver10(numbers) {
+//   return numbers.filter(num => num > 10).length;
+// }
+
+// const input = [5, 12, 18, 7,13];
+// const output = countOver10(input);
+// console.log(output);
+
+
+
+// 19. Get even numbers and print each one
+ // Even numbers ko filter karo aur unhe console pe print karo.
+ // Input: [1, 2, 3, 4] => Output: console.log 2, 4
+
+
+
+
+
+//  function printEvenNumbers(numbers) {
+//   numbers
+//     .filter(num => num % 2 === 0)  
+    
+//     .forEach(num => console.log(num));  
+    
+// }
+
+// let a = [1, 2, 3, 4];
+// printEvenNumbers(a);
+
+
+// 20. Create array of user descriptions
+ // Har user ke name aur age ka string banao format: "Name is Age"
+ // Input: [{ name: 'Sam', age: 30 }, { name: 'Lily', age: 22 }] => Output: ['Sam is 30', 'Lily is 22']
+
+
+// function create(users) {
+//   return users.map(user => ${user.name} is ${user.age});
+// }
+
+// let a = [
+//   { name: 'Sam', age: 30 },
+//   { name: 'Lily', age: 22 }
+// ];
+// let b = create(a);
+// console.log(b);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

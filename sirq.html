@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+        <div id="boxone">
+            <p>Jaya</p>
+        </div>
+        <div id="boxtwo">
+            <p>Honey</p>
+        </div>
+        <div id="boxthree">
+          <div>
+            <div>
+                iwsdh fige igve h e rgnvg  emhbg jj rn  gihb hbw hvb  wj wjignngrwekrgjek njk jeoniernn ok  n;;nijnkjk j jinn   !.
+            </div>
+          </div>
+        </div>       
+        <button onclick="textchange()">click me</button>
+    </div>
+
+
+    <script>
+//         let a = 1;
+// let b = 2;
+// let c = 3;
+
+// let hre = a;             
+// a = b;
+// b = c;
+// c = hre; 
+
+// console.log(`a: ${a}, b: ${b}, c: ${c}`); 
+
+let a = document.getElementById("boxone");
+let b = document.getElementById("boxtwo");
+let c = document.getElementById("boxthree");;
+let swap;
+
+function textchange(){
+    swap = a.innerHTML;
+    a.innerHTML = b.innerHTML;
+    b.innerHTML = c.innerHTML;
+    c.innerHTML = swap;
+}
+    </script>
+</body>
+</html>

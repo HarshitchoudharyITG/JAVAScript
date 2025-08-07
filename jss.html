@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id='parent'>
+    <p>ABC</p>
+    <img src='http://www.w3schools.com/tags/smiley.gif' alt="Smiley"/>
+    <div id='child'>
+        <div id='child1'>test1</div>
+        <div id='child2'>test2</div>
+    </div>
+</div>
+
+<script>
+
+
+    let element  = document.getElementById("parent");
+    let text = element.getAttribute("id")
+    console.log(text)
+
+     let element1 = document.getElementById("parent");
+    let text1 = element.hasAttribute("id")
+    console.log(text1)
+
+    
+    
+    
+    let element4 = document.getElementById("parent");
+    let text4 = element4.attributes;
+    console.log(text4)
+    
+    let element2= document.getElementById("parent");
+   let text2 = element.setAttribute("id","h1")
+   console.log(text2)
+
+
+   let element3 = document.getElementById("parent");
+   let text3 = element.removeAttribute("id")
+    console.log(text3)
+</script>
+</body>
+</html>

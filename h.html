@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  
+</style>
+</head>
+<body>
+
+<div class="all-div-container">
+  <div class="div-item" id="div1" onclick="swapDiv(innerHtml);">
+    <h1>harshit ckhoudhary</h1>
+  </div>
+  <div class="div-item" id="div2" onclick="swapDiv(innerHtml);"><h1>PARTH</h1></div>
+  <div class="div-item" id="div3" onclick="swapDiv(innerHtml);"><h1>ARYAN</h1></div>
+</div>
+
+<script>
+function swapDiv(clickedElem) {
+  const container = clickedElem.parentElement;
+  const allDivs = Array.from(container.children); 
+  const centerIndex = 0; 
+  if (clickedElem === allDivs[centerIndex]) {
+    return;
+  }
+
+  
+  container.removeChild(clickedElem);
+
+  if (centerIndex < allDivs.length - 1) {
+    container.insertBefore(clickedElem, allDivs[centerIndex]);
+  } else {
+    container.appendChild(clickedElem); 
+  }
+}
+</script>
+
+</body>
+</html>

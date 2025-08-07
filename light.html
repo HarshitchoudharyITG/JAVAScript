@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="switchFan()">click me</button>
+    <img src="https://www.shutterstock.com/image-vector/electric-fan-flat-vector-600nw-303927878.jpg" id="fan">
+    <script>
+        let of = "https://www.shutterstock.com/image-vector/electric-fan-flat-vector-600nw-303927878.jpg";
+        let on = "https://cdn.dribbble.com/userupload/21260453/file/original-8131c859f8921119e6aa595c541e3945.gif";
+        function switchFan() {
+            const fan = document.getElementById("fan");
+            if (fan.src == of) {
+                fan.src = on;
+            }
+            else {
+                fan.src = of;
+            }
+        }
+    </script>
+</body>
+
+</html>

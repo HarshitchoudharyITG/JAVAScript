@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Input with Delete</title>
+    <style>
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #textInput{
+            text-align: center;
+        }
+      input#textInput {
+    width: 225px;
+    height: 76px;
+    background: aquamarine;
+}
+    </style>
+</head>
+<body>
+    <input type="text" id="textInput" class="hii" placeholder="Enter text here">
+    <button onclick="addText()">Add Text</button>
+    <p id="outputContainer"></p>
+
+    <script>
+        function addText() {
+            const inputText = document.getElementById("textInput").value;
+            if (inputText.trim() === "") {
+                return; 
+            }
+
+            const outputContainer = document.getElementById("outputContainer");
+
+            const newItemDiv = document.createElement("p");
+            newItemDiv.classList.add("item");
+            const textSpan = document.createElement("span");
+            textSpan.innerText = inputText;
+
+            const deleteButton = document.createElement("button");
+            deleteButton.innerText = "Delete";
+            deleteButton.classList.add("delete-btn");
+            deleteButton.onclick = function() {
+                outputContainer.removeChild(newItemDiv);
+            };
+
+            newItemDiv.append(textSpan);
+            newItemDiv.append(deleteButton);
+
+            outputContainer.append(newItemDiv);
+            document.getElementById("textInput").value = "";
+        }
+    </script>
+</body>
+</html>
